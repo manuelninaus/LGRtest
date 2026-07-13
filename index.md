@@ -36,12 +36,24 @@ In der Proof-of-Concept-Phase wird das Repository zunächst durch Studierendenin
 
 ## Aktuelle Beispielanalysen
 
-{% assign items = site.analyses | sort: "title" %}
-<ul>
-{% for item in items %}
-  <li><a href="{{ item.url | relative_url }}">{{ item.title }}<em.theory }}</li>
-{% endfor %}
-</ul>
+{% if site.analyses %}
+  {% assign items = site.analyses | sort: "title" %}
+
+  <ul>
+    {% for item in items %}
+      <li>
+        <a href="{{ item.url | relative_url }}">
+          {{ item.title }}
+        </a>
+        {% if item.theory %}
+          – <em>{{ item.theory }}</em>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+{% else %}
+  <p>Derzeit sind keine Beispielanalysen verfügbar.</p>
+{% endif %}
 
 ## Entwicklungslogik
 
