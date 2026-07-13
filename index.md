@@ -6,7 +6,7 @@ permalink: /
 
 # Living Game Repository
 
-Das **Living Game Repository** ist eine wachsende Sammlung psychologischer Spielanalysen. Es verbindet psychologische Theoriearbeit, digitale Medienanalyse, wissenschaftliches Schreiben und studentische Wissensproduktion.
+Das Living Game Repository ist eine wachsende Sammlung psychologischer Spielanalysen. Es verbindet psychologische Theoriearbeit, digitale Medienanalyse, wissenschaftliches Schreiben und studentische Wissensproduktion.
 
 In der Proof-of-Concept-Phase wird das Repository zunächst durch Studierendeninput getragen. Ziel ist es, zu erproben, ob aus theoriegeleiteten Spielanalysen wiederverwendbare Materialien für Lehre, Forschung, Transfer und Wissenschaftskommunikation entstehen können.
 
@@ -14,23 +14,30 @@ In der Proof-of-Concept-Phase wird das Repository zunächst durch Studierendenin
 
 <div class="card-grid">
 
-<div class="card">
-<h3>Spielanalysen</h3>
-<p>Theoriegeleitete Analysen einzelner Spiele, Spielmechaniken, Tutorials, Figuren oder Spielerfahrungen.</p>
-<p>/analyses/Zu den Analysen</a></p>
-</div>
+  <div class="card">
+    <h3>Spielanalysen</h3>
+    <p>Theoriegeleitete Analysen einzelner Spiele, Spielmechaniken, Tutorials, Figuren oder Spielerfahrungen.</p>
+    <p>
+      <a href="{{ "/analyses/" | relative_url }}">Zu den Analysen</a>
+    </p>
+  </div>
 
-<div class="card">
-<h3>Theorien</h3>
-<p>Psychologische Konzepte wie Selbstwirksamkeit, Flow, Selbstbestimmungstheorie, Presence, Eudaimonia oder CTML.</p>
-<p><a eories/Theorieübersicht</a></p>
-</div>
+  <div class="card">
+    <h3>Theorien</h3>
+    <p>Psychologische Konzepte wie Selbstwirksamkeit, Flow, Selbstbestimmungstheorie, Presence, Eudaimonia oder CTML.</p>
+    <p>
+      <!-- Adjust href when you have a theory overview page -->
+      <a href="{{ "/theories/" | relative_url }}">Theorieübersicht</a>
+    </p>
+  </div>
 
-<div class="card">
-<h3>Für Studierende</h3>
-<p>Anleitungen, Templates und Hinweise zur Erstellung eigener Beiträge.</p>
-<p>/contribute/Beitrag erstellen</a></p>
-</div>
+  <div class="card">
+    <h3>Für Studierende</h3>
+    <p>Anleitungen, Templates und Hinweise zur Erstellung eigener Beiträge.</p>
+    <p>
+      <a href="{{ "/contribute/" | relative_url }}">Beitrag erstellen</a>
+    </p>
+  </div>
 
 </div>
 
