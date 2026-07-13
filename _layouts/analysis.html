@@ -1,8 +1,12 @@
----
-layout: default
----
-
+<!-- _layouts/analysis.html -->
 <article class="analysis">
+  <!-- Top navigation -->
+  <nav class="analysis-nav">
+    <a href="{{ "/analyses/" | relative_url }}">&larr; Zur Übersicht der Analysen</a>
+    &nbsp;|&nbsp;
+    <a href="{{ "/" | relative_url }}">Zur Startseite</a>
+  </nav>
+
   <h1>{{ page.title }}</h1>
 
   <section class="metadata">
@@ -28,17 +32,30 @@ layout: default
 
       <dt>Schlagwörter</dt>
       <dd>
-        {% for tag in page.tags %}
-          <span class="tag">{{ tag }}</span>
-        {% endfor %}
+        {% if page.tags %}
+          {% for tag in page.tags %}
+            <span class="tag">{{ tag }}</span>
+          {% endfor %}
+        {% else %}
+          <span class="tag">Keine Schlagwörter</span>
+        {% endif %}
       </dd>
     </dl>
   </section>
 
-  {{ content }}
+  <section class="analysis-content">
+    {{ content }}
+  </section>
 
   <section class="repository-note">
     <h2>Hinweis zum Repository-Status</h2>
-    <p>Dieser Beitrag ist Teil der Proof-of-Concept-Phase des Living Game Repository. Der Status beschreibt die interne Nutzung im Lehrkontext und ist nicht automatisch mit einer öffentlichen Freigabe gleichzusetzen.</p>
+    <p>
+      Dieser Beitrag ist Teil der Proof-of-Concept-Phase des Living Game Repository.
+      Der Status beschreibt die interne Nutzung im Lehrkontext und ist nicht
+      automatisch mit einer öffentlichen Freigabe gleichzusetzen.
+    </p>
   </section>
+
+  <!-- Related analyses section (optional, see below) -->
+  {% include related-analyses.html %}
 </article>
