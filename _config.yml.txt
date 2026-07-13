@@ -2,6 +2,9 @@ title: "Living Game Repository"
 description: "Psychologische Spielanalysen aus Lehre, Learning Lab und studentischer Wissensproduktion"
 lang: de-AT
 
+# If you want to use a GitHub Pages theme, you could set:
+# theme: jekyll-theme-primer
+# For now, you're using custom layouts, so `theme: null` is fine.
 theme: null
 
 collections:
