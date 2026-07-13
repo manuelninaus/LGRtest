@@ -6,7 +6,7 @@ theme: null
 collections:
   analyses:
     output: true
-    permalink: /analysen/:name/
+    permalink: /analyses/:name/
 
 defaults:
   - scope:
