@@ -1,0 +1,48 @@
+---
+layout: default
+title: Start
+permalink: /
+---
+
+# Living Game Repository
+
+Das **Living Game Repository** ist eine wachsende Sammlung psychologischer Spielanalysen. Es verbindet psychologische Theoriearbeit, digitale Medienanalyse, wissenschaftliches Schreiben und studentische Wissensproduktion.
+
+In der Proof-of-Concept-Phase wird das Repository zunächst durch Studierendeninput getragen. Ziel ist es, zu erproben, ob aus theoriegeleiteten Spielanalysen wiederverwendbare Materialien für Lehre, Forschung, Transfer und Wissenschaftskommunikation entstehen können.
+
+## Was findet sich hier?
+
+<div class="card-grid">
+
+<div class="card">
+<h3>Spielanalysen</h3>
+<p>Theoriegeleitete Analysen einzelner Spiele, Spielmechaniken, Tutorials, Figuren oder Spielerfahrungen.</p>
+<p>/analyses/Zu den Analysen</a></p>
+</div>
+
+<div class="card">
+<h3>Theorien</h3>
+<p>Psychologische Konzepte wie Selbstwirksamkeit, Flow, Selbstbestimmungstheorie, Presence, Eudaimonia oder CTML.</p>
+<p><a eories/Theorieübersicht</a></p>
+</div>
+
+<div class="card">
+<h3>Für Studierende</h3>
+<p>Anleitungen, Templates und Hinweise zur Erstellung eigener Beiträge.</p>
+<p>/contribute/Beitrag erstellen</a></p>
+</div>
+
+</div>
+
+## Aktuelle Beispielanalysen
+
+{% assign items = site.analyses | sort: "title" %}
+<ul>
+{% for item in items %}
+  <li><a href="{{ item.url | relative_url }}">{{ item.title }}<em.theory }}</li>
+{% endfor %}
+</ul>
+
+## Entwicklungslogik
+
+Das Repository ist „living“, weil es semesterweise erweitert, überarbeitet und strukturell weiterentwickelt wird. Die erste Phase ist bewusst niedrigschwellig. Perspektivisch kann daraus eine professionellere Infrastruktur mit Qualitätsstufen, redaktioneller Kuratierung, öffentlicher Showcase-Ebene und stärkerer technischer Such- und Filterfunktion entstehen.

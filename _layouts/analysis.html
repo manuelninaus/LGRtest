@@ -1,0 +1,44 @@
+---
+layout: default
+---
+
+<article class="analysis">
+  <h1>{{ page.title }}</h1>
+
+  <section class="metadata">
+    <h2>Metadaten</h2>
+    <dl>
+      <dt>Spiel/Medium</dt>
+      <dd>{{ page.game }}</dd>
+
+      <dt>Genre</dt>
+      <dd>{{ page.genre }}</dd>
+
+      <dt>Plattform</dt>
+      <dd>{{ page.platform }}</dd>
+
+      <dt>Theorie/Konzept</dt>
+      <dd>{{ page.theory }}</dd>
+
+      <dt>Psychologischer Schwerpunkt</dt>
+      <dd>{{ page.focus }}</dd>
+
+      <dt>Repository-Status</dt>
+      <dd>{{ page.status }}</dd>
+
+      <dt>Schlagwörter</dt>
+      <dd>
+        {% for tag in page.tags %}
+          <span class="tag">{{ tag }}</span>
+        {% endfor %}
+      </dd>
+    </dl>
+  </section>
+
+  {{ content }}
+
+  <section class="repository-note">
+    <h2>Hinweis zum Repository-Status</h2>
+    <p>Dieser Beitrag ist Teil der Proof-of-Concept-Phase des Living Game Repository. Der Status beschreibt die interne Nutzung im Lehrkontext und ist nicht automatisch mit einer öffentlichen Freigabe gleichzusetzen.</p>
+  </section>
+</article>

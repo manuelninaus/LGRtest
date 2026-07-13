@@ -1,0 +1,23 @@
+title: "Living Game Repository"
+description: "Psychologische Spielanalysen aus Lehre, Learning Lab und studentischer Wissensproduktion"
+lang: de-AT
+theme: null
+
+collections:
+  analyses:
+    output: true
+    permalink: /analysen/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: "analyses"
+    values:
+      layout: analysis
+
+markdown: kramdown
+kramdown:
+  input: GFM
+
+exclude:
+  - README.md
