@@ -1,0 +1,38 @@
+<section class="related-analyses">
+  <h2>Weitere passende Analysen</h2>
+
+  {% if site.analyses and page.tags %}
+    {% assign related = "" | split: "" %}
+
+    {% for other in site.analyses %}
+      {% if other.url != page.url %}
+        {% if other.tags %}
+          {% for tag in page.tags %}
+            {% if other.tags contains tag %}
+              {% unless related contains other %}
+                {% assign related = related | push: other %}
+              {% endunless %}
+            {% endif %}
+          {% endfor %}
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+
+    {% if related.size > 0 %}
+      <ul>
+        {% for item in related %}
+          <li>
+            <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+            {% if item.theory %}
+              – <em>{{ item.theory }}</em>
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p>Derzeit sind keine weiteren Analysen mit ähnlichen Schlagwörtern verfügbar.</p>
+    {% endif %}
+  {% else %}
+    <p>Es sind noch keine weiteren Analysen mit Schlagwörtern hinterlegt.</p>
+  {% endif %}
+</section>
